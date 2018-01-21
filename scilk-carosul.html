@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scilk </title>
+	<link rel="stylesheet" type="text/css" href="css/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+	<style type="text/css">
+    .slick-slide img {
+      width: 100%;
+}
+.slick-prev:before, .slick-next:before {
+      display: none;
+}
+.slick-slide {
+     transition: all ease-in-out .3s;
+     padding: 10px 0;
+}
+.slick-active {
+     transition: all ease-in-out 1s;
+}
+.slick-current img{
+		height: 100%
+}
+.slick-current {
+      opacity: 1;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+      transform: scale(1.09, 1.09);
+      padding: 0;
+}
+    .slick-arrow {
+	position: absolute;
+	z-index: 99;
+	font-family: 'FontAwesome';
+	}
+.tc-twitter-arrows.tc-arrow-next {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	border: none;
+	background: #147CFA;
+	color: #fff;
+}
+.mn.slick-arrow {
+	top: 40%;
+	left: 31%;
+}
+.aa.slick-arrow{
+	top: 40%;
+	right: 31%;
+}
+  </style>
+</head>
+<body>
+<div class="slider">
+    <div><img src="images/carusol.jpg" alt=""></div>
+    <div><img src="images/carusol.jpg" alt=""></div>
+    <div><img src="images/carusol.jpg" alt=""></div>
+    <div><img src="images/carusol.jpg" alt=""></div>
+    
+  </div>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/slick.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+  $('.slider').slick({
+   slidesToShow: 3,
+        // autoplay: true,
+        centerMode: true,
+        prevArrow: '<div class="aa"><input value="&#xf105;" class="tc-twitter-arrows tc-arrow-next" type="submit"></div>',
+        nextArrow: '<div class="mn"><input value="&#xf104;" class="tc-twitter-arrows tc-arrow-next" type="submit"></div>'
+  });
+});
+	$('.slick-current').slick({
+  centerMode: true,
+   slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+	$('.selector').slick({
+  nextArrow: '<i class="fa fa-arrow-right"></i>',
+  prevArrow: '<i class="fa fa-arrow-left"></i>',
+left:'0px',
+});
+
+</script>
+</body>
+</html>
